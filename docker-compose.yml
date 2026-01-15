@@ -6,7 +6,6 @@ services:
     restart: always
     volumes:
       - firefly_iii_upload:/var/www/html/storage/upload
-#    env_file: mini.env
     networks:
       - firefly_iii
     ports:
@@ -31,7 +30,6 @@ services:
     image: alpine
     restart: always
     container_name: firefly_iii_cron
-    env_file: mini.env
     command: sh -c "
       apk add tzdata && \
       (ln -s /usr/share/zoneinfo/$$TZ /etc/localtime || true) && \
