@@ -1,3 +1,5 @@
+#https://docs.firefly-iii.org/how-to/firefly-iii/installation/docker/
+
 services:
   app:
     image: fireflyiii/core:latest
@@ -17,7 +19,6 @@ services:
     hostname: db
     container_name: firefly_iii_db
     restart: always
-    env_file: .db.env
     networks:
       - firefly_iii
     volumes:
